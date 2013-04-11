@@ -24,4 +24,17 @@ class Recipe < ActiveRecord::Base
     self.servings ||= 1
   end
 
+  def similar_recipes
+    @ingredientnames ||= Array.new
+    self.ingredients.each do |ingredient|
+      @ingredientnames << "'" + ingredient.name + "'"
+    end
+    ingredientlist = @ingredientnames.join(",")
+    ingredientlist.gsub("(", "")
+    ingredientlist.gsub(")", "")
+    sql = "select *, count(recipe_id) as ingredient_count from ingredients inner join recipes on recipes.id = ingredients.recipe_id where ingredients.name in (INGREDIENT_LIST) group by recipe_id order by ingredient_count desc limit 5"
+    sql["INGREDIENT_LIST"] = ingredientlist
+    Recipe.find_by_sql sql
+  end
+
 end

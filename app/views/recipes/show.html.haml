@@ -31,6 +31,15 @@
   %br
   = @recipe.user.name
 
+%p
+  %strong
+    = "Gelijkaardige recepten"
+  %br
+  %ul
+    - @recipe.similar_recipes.each do |simrec|
+      %li
+        = link_to simrec.name, recipe_path(simrec)
+
 .form-actions
   = link_to t('.back'), recipes_path, :class => 'btn'
   = link_to t('.edit'), edit_recipe_path(@recipe), :class => 'btn' if @recipe.user_id == current_user.id
