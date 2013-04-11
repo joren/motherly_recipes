@@ -1,0 +1,41 @@
+.row
+  .span12
+    %h2= t :all_recipes
+    %hr
+.row
+  .span9
+    - @recipes.each do |recipe|
+      %article.row
+        .span2.hidden-phone
+          %p
+          = l(recipe.created_at, :format => "%e %b %Y")
+          %br
+          - if !recipe.origin.blank?
+            %b Origineel recept van:
+            %br
+            = recipe.origin
+            %br
+          %b Toegevoegd door:
+          %br
+          = recipe.user.name
+          %hr
+          %p= "#{t('recepten.ingredienten')}:"
+          %ul.post-tags
+            - recipe.ingredients.each do |ingredient|
+              %li= ingredient.name
+        .span7
+          %h3
+            %i.icon.icon-food
+              = link_to recipe.name, recipe
+          = link_to image_tag(recipe.picture.url(:banner)), recipe unless recipe.picture.url.match(/missing.png$/)
+          %p= recipe.description
+          = link_to "#{t('recepten.recept_bekijken')} »", recipe, class: "btn btn-primary"
+    = will_paginate @recipes
+  %aside.span3
+    .well
+      %strong= t('recepten.types_gerechten')
+      %hr
+        %ul.tag-cloud
+          - @types.each do |type|
+            %li
+              = link_to type.name, "/categorie/#{type.name.gsub('/','-')}"

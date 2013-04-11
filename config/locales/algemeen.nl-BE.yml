@@ -1,0 +1,31 @@
+nl-BE:
+  add_a_recipe: "Voeg een recept toe"
+  afmelden: "Afmelden"
+  all_recipes: "Alle recepten"
+  invite_someone: "Iemand uitnodigen"
+  my_recipes: "Mijn recepten"
+  woordje_uitleg: "Woordje uitleg"
+
+  recepten:
+    aantal_en_eenheid: "Aantal en eenheid"
+    aantal_personen: "Aantal personen"
+    annuleer: "Annuleer"
+    bereiding: "Bereiding"
+    beschrijving: "Beschrijving"
+    details: "Details"
+    duur: "Duur"
+    foto_uploaden: "Foto uploaden"
+    in_minuten: "in minuten"
+    ingredient: "Ingrediënt"
+    ingredient_verwijderen: "ingredient verwijderen"
+    ingredienten: 'Ingrediënten'
+    kies_een_type: "Kies een type"
+    naam: "Naam"
+    nieuw-recept-titel: "Nieuw recept"
+    recept_aanpassen: "Recept aanpassen"
+    recept_bekijken: 'Recept bekijken'
+    toegevoegd_door: "Toegevoegd door"
+    type: "Type"
+    types_gerechten: 'Types gerechten'
+    voeg_ingredient_toe: "Voeg ingredient toe"
+    you_have_no_recipes: "Je hebt zelf nog geen recepten toegevoegd."

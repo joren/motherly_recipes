@@ -1,0 +1,27 @@
+nl-be:
+  simple_form:
+    "yes": 'Ja'
+    "no": 'Neen'
+    required:
+      text: 'verplicht'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Problemen. Kijk even na:"
+    # Labels and hints examples
+    labels:
+      defaults:
+        password: 'Wachtwoord'
+        password_confirmation: 'Bevestiging wachtwoord'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+

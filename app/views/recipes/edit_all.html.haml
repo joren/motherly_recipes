@@ -1,0 +1,14 @@
+= form_for :recipe, :url => update_all_path, :html => { :method => :put } do
+  %table
+    %tr
+      %th Name
+      %th description
+      %th origin
+    - @recipes.each do |recipe|
+      = fields_for "recipe[]", recipe do |recipe_fields|
+        %tr
+          %td= recipe_fields.text_field :name
+          %td= recipe_fields.text_area :description
+          %td= recipe_fields.text_field :origin
+  .actions
+    = submit_tag

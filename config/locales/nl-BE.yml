@@ -1,0 +1,437 @@
+/nl-be:
+  hello: Dag wrede wereld!
+  date:
+    abbr_day_names:
+    - zon
+    - maa
+    - din
+    - woe
+    - don
+    - vri
+    - zat
+    abbr_month_names:
+    -
+    - jan
+    - feb
+    - mar
+    - apr
+    - mei
+    - jun
+    - jul
+    - aug
+    - sep
+    - okt
+    - nov
+    - dec
+    day_names:
+    - zondag
+    - maandag
+    - dinsdag
+    - woensdag
+    - donderdag
+    - vrijdag
+    - zaterdag
+    formats:
+      default: ! '%d-%m-%Y'
+      long: ! '%e %B %Y'
+      short: ! '%e %b'
+    month_names:
+    -
+    - januari
+    - februari
+    - maart
+    - april
+    - mei
+    - juni
+    - juli
+    - augustus
+    - september
+    - oktober
+    - november
+    - december
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: ongeveer een uur
+        other: ongeveer %{count} uur
+      about_x_months:
+        one: ongeveer een maand
+        other: ongeveer %{count} maanden
+      about_x_years:
+        one: ongeveer een jaar
+        other: ongeveer %{count} jaar
+      almost_x_years:
+        one: bijna een jaar
+        other: bijna %{count} jaar
+      half_a_minute: een halve minuut
+      less_than_x_minutes:
+        one: minder dan een minuut
+        other: minder dan %{count} minuten
+      less_than_x_seconds:
+        one: minder dan een seconde
+        other: minder dan %{count} seconden
+      over_x_years:
+        one: meer dan een jaar
+        other: meer dan %{count} jaar
+      x_days:
+        one: 1 dag
+        other: ! '%{count} dagen'
+      x_minutes:
+        one: 1 minuut
+        other: ! '%{count} minuten'
+      x_months:
+        one: 1 maand
+        other: ! '%{count} maanden'
+      x_seconds:
+        one: 1 seconde
+        other: ! '%{count} seconden'
+    prompts:
+      day: dag
+      hour: uur
+      minute: minuut
+      month: maand
+      second: seconde
+      year: jaar
+  devise:
+    confirmations:
+      confirmed: Je account werd bevestigd. Je bent nu ingelogd.
+      send_instructions: Je zal een email ontvangen met instructies om je account te bevestigen.
+    failure:
+      already_authenticated: Je bent reeds aangemeld.
+      inactive: Je account werd nog niet geactiveerd.
+      invalid: Onjuist email-adres of wachtwoord.
+      invalid_token: Onjuiste authenticatie-token.
+      locked: Je account werd geblokkeerd.
+      timeout: Je sessie is verlopen, gelieve opnieuw aan te melden.
+      unauthenticated: Je moet aanmelden voor je kan verder doen.
+      unconfirmed: Je dient eerst je account te bevestigen voor je kan verder doen.
+    mailer:
+      confirmation_instructions:
+        subject: Bevestigings-instructies
+      reset_password_instructions:
+        subject: Wachtwoord reset instructies
+      unlock_instructions:
+        subject: Deblokeer instructies
+    passwords:
+      no_token: Je kan deze pagina niet zien vanuit een 'paswoord reset'-link. Als je toch van een 'wachtwoord reset'-mail komt, zorg dat je zeker de volledige URL gebruikt.
+      send_instructions: Je zal een email ontvangen met instructies om je wachtwoord te resetten.
+      updated: Je wachtwoord werd aangepast, je bent nu aangemald.
+      updated_not_active: Je wachtwoord is veranderd.
+    registrations:
+      destroyed: Au revoir! Bye! Daaaag! Je account werd gecancelt. :(
+      signed_up: Welkom! Je account werd aangemaakt. :-)
+      signed_up_but_inactive: Je gegevens waren correct, maar we kunnen je nog niet aanmelden omdat je gegevens nog niet bevestigd zijn.
+      signed_up_but_locked: Je gegevens waren correct, maar we kunnen je niet aanmelden omdat je account geblokkeerd is.
+      signed_up_but_unconfirmed: Een bericht met een bevestigingslink werd naar je email-adres verstuurd. Gelieve de link te openen om je account te activeren.
+      update_needs_confirmation: Je account werd ge-update, maar we moeten je nieuwe email-adres nog even bevestigen. Kijk je even je mail na? Je zou een bevestigingsmail moeten ontvangen hebben.
+      updated: Je account werd ge-update.
+    sessions:
+      signed_in: Jeej! Je bent aangemeld.
+      signed_out: Je bent afgemeld. Bu-bye!
+    unlocks:
+      send_instructions: Je zal binnen enkele minuten een mail ontvangen met instructies om je account te deblokkeeren.
+      send_paranoid_instructions: Indien je account bestaat, zal je een mail ontvangen met deblokkeer-instructies.
+      unlocked: Je account werd gedeblokkeerd. Meld je aan om verder te gaan.
+  errors:
+    format: ! '%{attribute} %{message}'
+    messages: &70287933765680
+      accepted: moet worden geaccepteerd
+      already_confirmed: werd reeds bevestigd, probeer eens aan te melden.
+      blank: moet opgegeven zijn
+      confirmation: komt niet met de bevestiging overeen
+      empty: moet opgegeven zijn
+      equal_to: moet gelijk zijn aan %{count}
+      even: moet even zijn
+      exclusion: is niet beschikbaar
+      expired: is verlopen, vraag een nieuwe aan.
+      greater_than: moet groter zijn dan %{count}
+      greater_than_or_equal_to: moet groter dan of gelijk zijn aan %{count}
+      inclusion: is niet in de lijst opgenomen
+      invalid: is ongeldig
+      less_than: moet minder zijn dan %{count}
+      less_than_or_equal_to: moet minder dan of gelijk zijn aan %{count}
+      not_a_number: is geen getal
+      not_an_integer: moet een geheel getal zijn
+      not_found: niet gevonden
+      not_locked: was niet geblokkeerd
+      not_saved:
+        one: ! '1 error zorgde er voor dat %{resource} niet kon worden opgeslaan:'
+        other: ! '%{count} zorgden er voor dat %{resource} niet kon worden opgeslaan:'
+      odd: moet oneven zijn
+      record_invalid: ! 'Validatie mislukt: %{errors}'
+      taken: is al in gebruik
+      too_long: is te lang (maximaal %{count} tekens)
+      too_short: is te kort (minimaal %{count} tekens)
+      wrong_length: heeft onjuiste lengte (moet %{count} tekens lang zijn)
+    template: &70287933791940
+      body: ! 'Controleer de volgende velden:'
+      header:
+        one: ! '%{model} niet opgeslagen: 1 fout gevonden'
+        other: ! '%{model} niet opgeslagen: %{count} fouten gevonden'
+  helpers:
+    select:
+      prompt: Selecteer
+    submit:
+      create: ! '%{model} toevoegen'
+      submit: ! '%{model} opslaan'
+      update: ! '%{model} bewaren'
+  number:
+    currency:
+      format:
+        delimiter: .
+        format: ! '%u%n'
+        precision: 2
+        separator: ! ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: €
+    format:
+      delimiter: .
+      precision: 2
+      separator: ! ','
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: miljard
+          million: miljoen
+          quadrillion: biljard
+          thousand: duizend
+          trillion: biljoen
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ! ' en '
+      two_words_connector: ! ' en '
+      words_connector: ! ', '
+  time:
+    am: ! '''s ochtends'
+    formats:
+      default: ! '%a %d %b %Y %H:%M:%S %Z'
+      long: ! '%d %B %Y %H:%M'
+      short: ! '%d %b %H:%M'
+    pm: ! '''s middags'
+nl-BE:
+  devise:
+    confirmations:
+      confirmed: Je account werd bevestigd. Je bent nu ingelogd.
+      send_instructions: Je zal een e-mail ontvangen met instructies om je account te bevestigen.
+    failure:
+      already_authenticated: Je bent al aangemeld.
+      inactive: Je account werd nog niet geactiveerd.
+      invalid: Onjuist e-mailadres of wachtwoord.
+      invalid_token: Onjuiste authenticatie-token.
+      locked: Je account werd geblokkeerd.
+      timeout: Je sessie is verlopen, gelieve opnieuw aan te melden.
+      unauthenticated: Je moet aanmelden voor je kan verder doen.
+      unconfirmed: Je dient eerst je account te bevestigen voor je kan verder doen.
+    invitations:
+      edit:
+        header: ! 'Vul deze gegevens in om toegang te krijgen tot Moederse Recepten:'
+        submit_button: Bevestigen
+      invitation_token_invalid: Je uitnodiging is niet meer geldig.
+      new:
+        header: ! 'Geef iemand toegang tot Moederse Recepten:'
+        submit_button: Bevestigen
+      no_invitations_remaining: ! 'Je hebt je maximum aantal uitnodigingen bereikt. '
+      send_instructions: De uitnodiging werd verstuurd.
+      updated: Je account werd succesvol aangemaakt.
+    mailer:
+      confirmation_instructions:
+        subject: Bevestigings-instructies
+      invitation_instructions:
+        subject: Onderwerp
+      reset_password_instructions:
+        subject: Wachtwoord reset instructies
+      unlock_instructions:
+        subject: Deblokeer instructies
+    passwords:
+      no_token: Je kan deze pagina niet zien vanuit een 'wachtwoord reset'-link. Als je toch van een 'wachtwoord reset'-mail komt, zorg dat je zeker de volledige URL gebruikt.
+      send_instructions: Je zal een e-mail ontvangen met instructies om je wachtwoord te resetten.
+      updated: Je wachtwoord werd aangepast, je bent nu aangemeld.
+      updated_not_active: Je wachtwoord is veranderd.
+    registrations:
+      destroyed: Au revoir! Bye! Daaaag! Je account werd gecanceld. :(
+      signed_up: Welkom! Je account werd aangemaakt. :-)
+      signed_up_but_inactive: Je gegevens waren correct, maar we kunnen je nog niet aanmelden omdat je gegevens nog niet bevestigd zijn.
+      signed_up_but_locked: Je gegevens waren correct, maar we kunnen je niet aanmelden omdat je account geblokkeerd is.
+      signed_up_but_unconfirmed: Een bericht met een bevestigingslink werd naar je e-mailadres verstuurd. Gelieve de link te openen om je account te activeren.
+      update_needs_confirmation: Je account werd ge-update, maar we moeten je nieuwe e-mailadres nog even bevestigen. Kijk je even je mail na? Je zou een bevestigingsmail moeten ontvangen hebben.
+      updated: Je account werd ge-update.
+    sessions:
+      signed_in: Jeej! Je bent aangemeld.
+      signed_out: Je bent afgemeld. Bu-bye!
+    unlocks:
+      send_instructions: Je zal binnen enkele minuten een mail ontvangen met instructies om je account te deblokkeeren.
+      send_paranoid_instructions: Indien je account bestaat, zal je een mail ontvangen met deblokkeer-instructies.
+      unlocked: Je account werd gedeblokkeerd. Meld je aan om verder te gaan.
+  errors:
+    messages:
+      already_confirmed: werd reeds bevestigd, probeer eens aan te melden.
+      expired: is verlopen, vraag een nieuwe aan.
+      not_found: niet gevonden
+      not_locked: was niet geblokkeerd
+      not_saved:
+        one: ! '1 error zorgde er voor dat %{resource} niet kon worden opgeslaan:'
+        other: ! '%{count} zorgden er voor dat %{resource} niet kon worden opgeslaan:'
+      accepted: Moet worden geaccepteerd
+      blank: moet opgegeven zijn
+      confirmation: komt niet met de bevestiging overeen
+      empty: moet opgegeven zijn
+      equal_to: moet gelijk zijn aan %{count}
+      even: moet even zijn
+  will_paginate:
+    previous_label: Vorige
+    next_label: Volgende
+  hello: Hey!
+  next_label: Volgende
+  number:
+    human:
+      decimal_units:
+        units:
+          unit: ''
+      format:
+        delimiter: ''
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  previous_label: Vorige
+  simple_form:
+    error_notification:
+      default_message: Er was een probleem bij het opslaan.
+    labels:
+      defaults:
+        password: Wachtwoord
+        password_confirmation: Bevestiging wachtwoord
+    'no': Nee
+    required:
+      mark: ! '*'
+      text: Verplicht
+      html: <abbr title="required">*</abbr>
+    'yes': Ja
+  user:
+    signed_in: Ingelogd
+    signed_out: Uitgelogd
+    unauthenticated: Niet geauthoriseerd
+  add_recipe: Voeg recept toe
+  helpers:
+    links:
+      confirm: Ben je zeker? Het recept zal onherroepelijk verwijderd worden.
+  opinio:
+    actions:
+      add: Voeg een reactie toe
+      delete: verwijderen
+    messages:
+      add_comment: Voeg een reactie toe
+      no_comments_found: Er zijn geen reacties op dit recept
+      comment_sent: Je reactie werd toegevoegd.
+  recipes:
+    show:
+      back: Terug
+      confirm: Ben je zeker? Het recept zal onheroepelijk verwijderd worden.
+      destroy: Verwijderen
+      edit: Aanpassen
+    form:
+      cancel: Annuleer
+    list:
+      actions: Acties
+      confirm: Ben je zeker? Het recept zal onheroepelijk verwijderd worden.
+      destroy: Verwijderen
+      edit: Aanpassen
+      new: Voeg een recept toe
+  woordje_uitleg_titel: Woordje Uitleg
+  add_a_recipe: Voeg een recept toe
+  afmelden: Afmelden
+  all_recipes: Recepten
+  annuleer: Annuleer
+  invite_someone: Iemand uitnodigen
+  my_recipes: Mijn recepten
+  recepten:
+    aantal_en_eenheid: Aantal en eenheid
+    aantal_personen: Aantal personen
+    annuleer: Annuleer
+    origin: Origineel van
+    bereiding: Bereiding
+    beschrijving: Beschrijving
+    duur: Duur
+    foto_uploaden: Foto uploaden
+    in_minuten: in minuten
+    ingredient: Ingrediënt
+    ingredient_verwijderen: Ingrediënt verwijderen
+    kies_een_type: Kies een type
+    naam: Naam
+    voeg_ingredient_toe: Voeg ingrediënt toe
+    my_recipes: Mijn recepten
+    nieuw_recept_titel: Titel
+    details: Details
+    ingredienten: Ingrediënten
+    nieuw-recept-titel: Nieuw recept
+    recept_aanpassen: Recept aanpassen
+    recept_bekijken: Recept bekijken
+    toegevoegd_door: Toegevoegd door
+    type: Type
+    types_gerechten: Types gerechten
+    you_have_no_recipes: Je hebt zelf nog geen recepten toegevoegd.
+  woordje_uitleg: Woordje uitleg
+  beschrijving: Beschrijving
+  naam: Naam
+  type: Type
+  details: Details
+  datetime:
+    prompts:
+      day: Dag
+  activemodel:
+    errors:
+      format: ! '%{attribute} %{message}'
+      messages: *70287933765680
+      template: *70287933791940
+  activerecord:
+    errors:
+      format: ! '%{attribute} %{message}'
+      messages: *70287933765680
+      template: *70287933791940
+  date:
+    abbr_month_names:
+    -
+    - januari
+    - februari
+    - maart
+    - april
+    - mei
+    - juni
+    - juli
+    - augustus
+    - september
+    - oktober
+    - november
+    - december

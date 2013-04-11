@@ -1,0 +1,5 @@
+<p>Welkom <%= @resource.email %>!</p>
+
+<p>Je kan het e-mail adres van je account bevestigen adhv onderstaande link:</p>
+
+<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>

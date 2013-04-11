@@ -1,0 +1,7 @@
+<p>Hallo <%= @resource.email %>!</p>
+
+<p>Je account werd geblokkeerd omdat iemand meermaals heeft proberen inloggen met jouw email-adres en een foutief wachtwoord.</p>
+
+<p>Klik op onderstaande link om je account te deblokkeren:</p>
+
+<p><%= link_to 'Deblokkeer mijn account', unlock_url(@resource, :unlock_token => @resource.unlock_token) %></p>

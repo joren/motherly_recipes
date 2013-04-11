@@ -1,0 +1,8 @@
+<p>Hallo <%= @resource.email %>!</p>
+
+<p>Iemand heeft je uitgenodigd voor Moederse Recepten (<%= root_url %>), je kan deze uitnodiging accepteren door te klikken op onderstaande link.</p>
+
+<p><%= link_to 'Accepteer uitnodiging', accept_invitation_url(@resource, :invitation_token => @resource.invitation_token) %></p>
+
+<p>Als je helemaal niet wil uitgenodigd worden, mag je deze mail negeren.<br />
+  Je account zal niet worden aangemaakt tot je op bovenstaande link klikt en een wachtwoord aanmaakt.</p>

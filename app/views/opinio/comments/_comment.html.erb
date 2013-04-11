@@ -1,0 +1,13 @@
+<% reply = defined?(reply) ? reply : false %>
+<li id="comment_<%= comment.id %>">
+  (<%= comment.created_at %>) <%= comment.owner.name -%>: 
+  <%= (comment.body) -%>
+  (<%= link_to t('opinio.actions.delete'), comment_path(comment), :method => :delete, :remote => true %>)
+  <%# this enables only 1 level of replies %>
+  <% if Opinio.accept_replies && !reply %>
+    <span><%= link_to t('opinio.actions.reply'), reply_comment_path(comment), :remote => true %></span>
+    <ul id="comment_<%= comment.id %>_replies" class="replies">
+      <%= render :partial => "opinio/comments/comment", :collection => comment.comments, :locals => {:reply => true} %>
+    </ul>
+  <% end %>
+</li>

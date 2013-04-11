@@ -1,0 +1,53 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+nl-BE:
+  errors:
+    messages:
+      expired: "is verlopen, vraag een nieuwe aan."
+      not_found: "niet gevonden"
+      already_confirmed: "werd reeds bevestigd, probeer eens aan te melden."
+      not_locked: "was niet geblokkeerd"
+      not_saved:
+        one: "1 error zorgde er voor dat %{resource} niet kon worden opgeslaan:"
+        other: "%{count} zorgden er voor dat %{resource} niet kon worden opgeslaan:"
+
+  devise:
+    failure:
+      already_authenticated: 'Je bent reeds aangemeld.'
+      unauthenticated: 'Je moet aanmelden voor je kan verder doen.'
+      unconfirmed: 'Je dient eerst je account te bevestigen voor je kan verder doen.'
+      locked: 'Je account werd geblokkeerd.'
+      invalid: 'Onjuist email-adres of wachtwoord.'
+      invalid_token: 'Onjuiste authenticatie-token.'
+      timeout: 'Je sessie is verlopen, gelieve opnieuw aan te melden.'
+      inactive: 'Je account werd nog niet geactiveerd.'
+    sessions:
+      signed_in: 'Jeej! Je bent aangemeld.'
+      signed_out: 'Je bent afgemeld. Bu-bye!'
+    passwords:
+      send_instructions: 'Je zal een email ontvangen met instructies om je wachtwoord te resetten.'
+      updated: 'Je wachtwoord werd aangepast, je bent nu aangemald.'
+      updated_not_active: 'Je wachtwoord is veranderd.'
+      no_token: "Je kan deze pagina niet zien vanuit een 'paswoord reset'-link. Als je toch van een 'wachtwoord reset'-mail komt, zorg dat je zeker de volledige URL gebruikt."
+    confirmations:
+      send_instructions: 'Je zal een email ontvangen met instructies om je account te bevestigen.'
+      confirmed: 'Je account werd bevestigd. Je bent nu ingelogd.'
+    registrations:
+      signed_up: 'Welkom! Je account werd aangemaakt. :-)'
+      signed_up_but_unconfirmed: 'Een bericht met een bevestigingslink werd naar je email-adres verstuurd. Gelieve de link te openen om je account te activeren.'
+      signed_up_but_inactive: 'Je gegevens waren correct, maar we kunnen je nog niet aanmelden omdat je gegevens nog niet bevestigd zijn.'
+      signed_up_but_locked: 'Je gegevens waren correct, maar we kunnen je niet aanmelden omdat je account geblokkeerd is.'
+      updated: 'Je account werd ge-update.'
+      update_needs_confirmation: "Je account werd ge-update, maar we moeten je nieuwe email-adres nog even bevestigen. Kijk je even je mail na? Je zou een bevestigingsmail moeten ontvangen hebben."
+      destroyed: 'Au revoir! Bye! Daaaag! Je account werd gecancelt. :('
+    unlocks:
+      send_instructions: 'Je zal binnen enkele minuten een mail ontvangen met instructies om je account te deblokkeeren.'
+      unlocked: 'Je account werd gedeblokkeerd. Meld je aan om verder te gaan.'
+      send_paranoid_instructions: 'Indien je account bestaat, zal je een mail ontvangen met deblokkeer-instructies.'
+    mailer:
+      confirmation_instructions:
+        subject: 'Bevestigings-instructies'
+      reset_password_instructions:
+        subject: 'Wachtwoord reset instructies'
+      unlock_instructions:
+        subject: 'Deblokeer instructies'

@@ -1,0 +1,21 @@
+= simple_nested_form_for @recipe, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :name, :label => t('recepten.naam')
+  = f.input :origin, :label => t('recepten.origin')
+  = f.input :servings, label: t('recepten.aantal_personen'), placeholder: "1"
+  = f.input :duration, label: t('recepten.duur'), placeholder: t('recepten.in_minuten')
+  = f.association :type, :collection => Type.all(:order => 'id'), :prompt => t('recepten.kies_een_type')
+  = f.input :description, :input_html => { :class => "span6" }, :label => t('recepten.beschrijving')
+  = f.simple_fields_for :ingredients do |ingredient|
+    = ingredient.input :unit, :label => "&nbsp;", :placeholder => "bv. 2 eetlepels", :label => t('recepten.aantal_en_eenheid')
+    = ingredient.input :name, :url => ingredients_path, :as => :autocomplete, :label => t('recepten.ingredient')
+    = ingredient.link_to_remove t('recepten.ingredient_verwijderen')
+  %p
+    = f.link_to_add t('recepten.voeg_ingredient_toe'), :ingredients
+  = f.input :preparation, :input_html => { :class => "span6" }, :label => t('recepten.bereiding')
+  = f.hidden_field :user_id, :value => current_user.id
+
+  = f.input :picture, :label => "#{t('recepten.foto_uploaden')} #{image_tag(@recipe.picture.url(:thumb)) if controller.action_name == "edit"}"
+
+  .form-actions
+    = f.submit "Klaar", :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t('annuleer')), recipes_path, :class => 'btn'

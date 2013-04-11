@@ -1,0 +1,57 @@
+!!!
+%html
+  %head
+    %title Moederse Recepten
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    = stylesheet_link_tag "application", :media => "screen"
+    = stylesheet_link_tag "print", :media => "print"
+    %link{rel: "stylesheet", href: 'http://fonts.googleapis.com/css?family=Patua+One'}
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+  %body
+    .container.wrapper
+      %header
+        .row
+          .span7
+            %h1
+              %a{:href => "/"}
+                = image_tag "logo.png"
+          .span5
+            %p
+              #e1.select2-container.bigdrop.select2-container-active
+      .row
+        .span12
+          .navbar
+            .navbar-inner
+              .container
+                %ul.nav
+                  %li{:class => ('active' if controller.action_name == 'new_index' && params[:controller] == 'recipes')}= link_to t(:all_recipes), recipes_index_path
+                  %li{:class => ('active' if controller.action_name == 'list' && params[:controller] == 'recipes')}= link_to t(:my_recipes), list_recipes_path
+                  %li{:class => ('active' if controller.action_name == 'new' && params[:controller] == 'recipes')}= link_to t(:add_recipe), new_recipe_url
+                  %li{:class => ('active' if controller.action_name == 'new' && params[:controller] == 'devise/invitations')}= link_to t(:invite_someone), new_invitation_url
+                  %li{:class => ('active' if controller.action_name == 'about' && params[:controller] == 'site')}= link_to t(:woordje_uitleg), :controller => '/site', :action => 'about'
+                  %li= link_to t(:afmelden), destroy_user_session_path, method: :delete
+
+      - flash.each do |name, msg|
+        %div{:class => "alert alert-#{name == :notice ? 'success' : 'errors'}"}
+          %a{:class => "close", :'data-dismiss' => "alert"}
+            x
+          = msg
+      .row
+        - if current_user
+          .span12= yield
+          / .span3
+          /   .user_nav
+          /     - if user_signed_in?
+          /       Aangemeld als
+          /       %strong
+          /         = current_user.name
+          /       (#{current_user.email})
+          /       %br/
+          /       = link_to "Klik hier om af te melden", destroy_user_session_path, method: :delete
+          /     - else
+          /       = link_to "Aanmelden", new_user_session_path
+        - else
+          .span12= yield

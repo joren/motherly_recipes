@@ -1,0 +1,33 @@
+@media print {
+.navbar {display: none;}
+
+.span3 {display: none;}
+
+.span4 {display:none;}
+
+.form-actions {display: none;}
+
+.alert {display: none;}
+
+#comments {display: none;}
+
+#new_comment {display: none;}
+
+#comments {display: none;}
+
+body { 
+  margin: 3cm;
+  font-size: 11px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  }
+
+h1 {font-size: 200%; font-weight: bold}
+h2 {font-size: 200%; font-style: italic; font-weight: normal}
+h3 {font-size: 160%; font-weight: bold}
+h4 {font-size: 160%; font-weight: bold}  
+h5 {font-size: 110%; font-weight: normal}
+h6 {font-size: 110%; font-style: italic; font-weight: normal}
+
+img { display: none;}
+
+}

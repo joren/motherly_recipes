@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %title Moederse Recepten
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    = stylesheet_link_tag "application", :media => "screen"
+    = stylesheet_link_tag "print", :media => "print"
+    %link{rel: "stylesheet", href: 'http://fonts.googleapis.com/css?family=Patua+One'}
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+  %body
+    .container.wrapper
+      %header
+        .row
+          .span12
+            %h1
+              %a{:href => "/"}
+                = image_tag "logo.png"
+      - flash.each do |name, msg|
+        %div{:class => "alert alert-#{name == :notice ? 'success' : 'errors'}"}
+          %a{:class => "close", :'data-dismiss' => "alert"}
+            x
+          = msg
+      .row
+        .span12
+          = yield

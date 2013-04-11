@@ -1,0 +1,38 @@
+- model_class = Recipe
+.page-header
+  %h1= @recipe.name
+  %h6= "#{@recipe.type.name} voor #{pluralize(@recipe.servings, "persoon") || "onbepaald aantal personen"}, duurtijd: #{pluralize(@recipe.duration.to_s, "minuut") if not @recipe.duration.blank?} #{"onbepaald aantal minuten" if @recipe.duration.blank?}"
+  %h6= "Origineel van: #{@recipe.origin}" if !@recipe.origin.blank?
+
+
+%p
+  = image_tag @recipe.picture.url(:medium) unless /missing.png$/.match(@recipe.picture.url)
+%p
+  %strong
+    = "#{t('recepten.beschrijving')}:"
+  %br
+  = @recipe.description
+%p
+  %strong
+    = "#{t('recepten.ingredienten')}:"
+  %br
+  %ul
+    - @recipe.ingredients.each do |ingredient|
+      %li
+        = "#{ingredient.unit.gsub('.',',')} #{ingredient.name}"
+%p
+  %strong
+    ="#{t('recepten.bereiding')}:"
+  %br
+  = markdown @recipe.preparation
+%p
+  %strong
+    = "#{t('recepten.toegevoegd_door')}:"
+  %br
+  = @recipe.user.name
+
+.form-actions
+  = link_to t('.back'), recipes_path, :class => 'btn'
+  = link_to t('.edit'), edit_recipe_path(@recipe), :class => 'btn' if @recipe.user_id == current_user.id
+
+= comments_for @recipe

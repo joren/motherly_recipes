@@ -1,0 +1,14 @@
+// Set the correct sprite paths
+$iconSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings", image);
+$iconWhiteSpritePath: asset-path("twitter/bootstrap/glyphicons-halflings-white", image);
+
+// Font Awesome
+
+@import 'bootstrap';
+@import 'bootstrap-responsive';
+@import 'font-awesome';
+
+@import 'theme';
+
+// Glyphicons
+// @import "twitter/bootstrap/sprites.less";

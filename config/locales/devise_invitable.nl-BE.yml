@@ -1,0 +1,16 @@
+nl-be:
+  devise:
+    invitations:
+      send_instructions: 'Een uitnodiging werd verstuurd naar %{email}.'
+      invitation_token_invalid: 'Het uitnodigingstoken is niet correct!'
+      updated: ' Je wachtwoord werd ingesteld. Je bent nu aangemeld.'
+      no_invitations_remaining: "Geen uitnodiging meer beschikbaar"
+      new:
+        header: "Verstuur een uitnodiging"
+        submit_button: "Verstuur uitnodiging"
+      edit:
+        header: "Stel je naam en wachtwoord in"
+        submit_button: "Instellen"
+    mailer:
+      invitation_instructions:
+        subject: 'Instructies uitnodiging'
