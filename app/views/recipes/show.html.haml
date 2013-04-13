@@ -25,20 +25,23 @@
     ="#{t('recepten.bereiding')}:"
   %br
   = markdown @recipe.preparation
-%p
-  %strong
-    = "#{t('recepten.toegevoegd_door')}:"
-  %br
-  = @recipe.user.name
 
-%p
-  %strong
-    = "Gelijkaardige recepten"
-  %br
-  %ul
-    - @recipe.similar_recipes.each do |simrec|
-      %li
-        = link_to simrec.name, recipe_path(simrec)
+.attribution
+  %p
+    %strong
+      = "#{t('recepten.toegevoegd_door')}:"
+    %br
+    = @recipe.user.name
+
+.relatedrecipes
+  %p
+    %strong
+      = "Gelijkaardige recepten"
+    %br
+    %ul
+      - @recipe.similar_recipes.each do |simrec|
+        %li
+          = link_to simrec.name, recipe_path(simrec)
 
 .form-actions
   = link_to t('.back'), recipes_path, :class => 'btn'
